@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvCreateAdvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="114dp"
+        android:text="Create a new advert"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgPostType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCreateAdvert"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbLost"
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:text="Lost" />
+
+        <RadioButton
+            android:id="@+id/rbFound"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Found" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_below="@id/rgPostType"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:layout_below="@id/etName"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="383dp"
+        android:layout_height="83dp"
+        android:layout_below="@id/etPhone"
+        android:hint="Description"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:layout_below="@id/etDescription"/>
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:hint="Location"
+        android:layout_below="@id/etDate"
+        android:onClick="onLocationClick" />
+
+    <Button
+        android:id="@+id/btnCurrentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etLocation"
+        android:onClick="getCurrentLocation"
+        android:text="Get Current Location" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCurrentLocation"
+        android:text="SAVE" />
+</RelativeLayout>
